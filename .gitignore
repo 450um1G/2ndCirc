@@ -1,0 +1,34 @@
+# Private materials — DO NOT COMMIT
+# Maps anonymized Reviewer N labels back to original GitHub handles.
+_PRIVATE_*.md
+_PRIVATE_*.txt
+_PRIVATE_*.csv
+
+# macOS metadata
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Editor / IDE artifacts
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Jupyter / Python cache (in case anyone reruns the notebook locally)
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# LaTeX build artifacts (in case anyone recompiles PDFs locally)
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.synctex.gz
+*.fls
+*.fdb_latexmk

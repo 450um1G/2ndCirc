@@ -1,0 +1,146 @@
+name: Author Information Submission (new contributors only)
+description: |
+  Submit your author information to be added to the BISTRO 2nd Circulation
+  manuscripts. **For new contributors only** — i.e., people who commented on
+  the 1st Circulation (or this 2nd Circulation) but are not yet listed in the
+  current author block of the 3-paper companion series. Existing coauthors are
+  already on the byline and do not need to fill this form.
+title: "[Author Info] <Your Name>"
+labels: ["author-info"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for contributing to this work!
+
+        Please fill in the fields below so we can add you to the author list of
+        the BISTRO 450/850 µm 3-paper companion series (Paper T to ApJS;
+        Papers S1, S2 to ApJ).
+
+        **Privacy note**: This issue is **publicly visible** on GitHub. The
+        Name / ORCID / Affiliation fields are also published in the final
+        manuscripts, so they pose no additional disclosure. The Email field is
+        required for AAS journal submission and compilation of the author list.
+        If you prefer **not** to disclose your email here, write `private` and
+        the corresponding author (@rsfuruya) will contact you via your GitHub
+        @-mention to obtain it privately.
+
+  - type: input
+    id: latex_author
+    attributes:
+      label: Name (LaTeX form, as it should appear in the author list)
+      description: |
+        Use the AASTeX `\author[ORCID]{Name}` form (you provide just the Name part here).
+        Use `~` for non-breaking spaces between initials and given names — e.g.
+        `Ray S.~Furuya`. Escape special characters as in `Christine Andr\'e`
+        (for `André`) or `Fran\c{c}oise Combes` (for `Françoise`).
+      placeholder: "Jane M.~Doe"
+    validations:
+      required: true
+
+  - type: input
+    id: orcid
+    attributes:
+      label: ORCID iD
+      description: |
+        16-digit identifier in `NNNN-NNNN-NNNN-NNNN` form (no `https://orcid.org/`
+        prefix). Required by AAS journals. If you do not have one, register a
+        free ORCID at https://orcid.org and paste the ID here.
+      placeholder: "0000-0002-0786-7307"
+    validations:
+      required: true
+
+  - type: textarea
+    id: affiliation_primary
+    attributes:
+      label: Primary Affiliation (full institutional address)
+      description: |
+        Department/institute, university/observatory, street address, city,
+        prefecture/state, postal code, country. Will be wrapped in
+        `\affiliation{...}` for the manuscript. Use AASTeX LaTeX-ready form.
+      placeholder: |
+        Institute of Liberal Arts and Sciences, Tokushima University,
+        Minami Jousanjima-Cho 1-1, Tokushima, Tokushima 770-8502, Japan
+    validations:
+      required: true
+
+  - type: textarea
+    id: affiliation_secondary
+    attributes:
+      label: Additional affiliation(s) (optional)
+      description: |
+        If you hold multiple affiliations relevant for the byline, list each as
+        a separate block separated by a blank line. Each will become a separate
+        `\affiliation{...}` line.
+      placeholder: |
+        e.g.
+        Visiting Associate Professor, Center for Computational Astrophysics (CfCA),
+        National Astronomical Observatory of Japan, Osawa 2-21-1, Mitaka,
+        Tokyo 181-8588, Japan
+
+        (blank line between affiliations)
+
+        Department of Physics, Some University, ..., Country
+    validations:
+      required: false
+
+  - type: input
+    id: email
+    attributes:
+      label: Email Address
+      description: |
+        Required for two reasons: (i) the AAS journal submission system needs
+        each author's email; (ii) the AASTeX `\email{...}` command itself is
+        load-bearing — an incomplete or malformed email can cause the
+        manuscript PDF compile to stop at the abstract. **This field will be
+        publicly visible on this GitHub issue.** If you prefer not to disclose
+        your email publicly, write `private` here and the corresponding author
+        will contact you via your GitHub @-mention to obtain it privately.
+      placeholder: "name@institution.edu"
+    validations:
+      required: true
+
+  - type: textarea
+    id: contribution
+    attributes:
+      label: Contribution statement (optional, for CRediT)
+      description: |
+        AAS journals (ApJ, ApJS) now require an Author Contributions section
+        based on the CRediT taxonomy (14 standard roles such as Conceptualization,
+        Data Curation, Formal Analysis, Investigation, Methodology, Writing —
+        original draft, Writing — review & editing, etc.).
+
+        The corresponding author will compile this section centrally at
+        submission time. By default, all coauthors will be credited with
+        generic roles consistent with their participation (typically "Writing
+        — review & editing"). Use this field only if you have a **specific**
+        contribution you would like recognized (e.g. "provided JCMT observing
+        time", "contributed the Bayesian noise model", "computed dust grain
+        opacities"); free-text is fine.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: papers
+    attributes:
+      label: To which paper(s) do you wish to be added?
+      description: |
+        Most contributors will be added to all three (the 3 papers share the
+        same author block by default). Use this to opt out of specific papers
+        if your contribution applies only to a subset.
+      multiple: true
+      options:
+        - Paper T (Technical Foundations, ApJS)
+        - Paper S1 (Grain Alignment, ApJ)
+        - Paper S2 (Population & Environment, ApJ)
+      default: 0
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I confirm the information above is accurate and I am willing to be a coauthor of the paper(s) selected above upon final journal acceptance.
+          required: true

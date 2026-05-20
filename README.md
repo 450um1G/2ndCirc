@@ -37,9 +37,19 @@ but may not be incorporated in the journal submission.
 Commenter identifiers in the response table have been anonymized
 (`Reviewer 1` … `Reviewer 18`) because this repository is publicly visible.
 
-> 💡 **Tip**: The comment-response table link above opens a rendered view
-> via GitHub Pages. If instead you click the `.html` file directly from the
-> repository file list at the top of this page and see raw HTML source,
+> 💡 **Tip for large PDFs**: GitHub's web preview can fail with "Unable to
+> render" or similar errors for PDFs larger than about 25 MB
+> (`450um1G_2ndCirc_PaperS2.pdf` ≈ 34 MB,
+> `450um1G_v20260414_finalbeforesplit.pdf` ≈ 29 MB,
+> `450um1G_v2026Jan21_1stCirc.pdf` ≈ 50 MB). These files are intact — just
+> right-click the file name in the file list above and choose **"Save link
+> as..."** (or **"Download linked file"**), then open locally in any PDF
+> reader. Paper T and Paper S1 are small enough that GitHub's preview works
+> directly.
+>
+> 💡 **Tip for the comment-response table**: The link above opens a rendered
+> view via GitHub Pages. If instead you click the `.html` file directly from
+> the repository file list at the top of this page and see raw HTML source,
 > please download the file (right-click → save) and open it locally in any
 > browser.
 

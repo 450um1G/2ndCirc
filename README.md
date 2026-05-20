@@ -38,14 +38,16 @@ Commenter identifiers in the response table have been anonymized
 (`Reviewer 1` … `Reviewer 18`) because this repository is publicly visible.
 
 > 💡 **Tip for large PDFs**: GitHub's web preview can fail with "Unable to
-> render" or similar errors for PDFs larger than about 25 MB
-> (`450um1G_2ndCirc_PaperS2.pdf` ≈ 34 MB,
-> `450um1G_v20260414_finalbeforesplit.pdf` ≈ 29 MB,
-> `450um1G_v2026Jan21_1stCirc.pdf` ≈ 50 MB). These files are intact — just
-> right-click the file name in the file list above and choose **"Save link
-> as..."** (or **"Download linked file"**), then open locally in any PDF
-> reader. Paper T and Paper S1 are small enough that GitHub's preview works
-> directly.
+> render" or similar errors for PDFs larger than about 25 MB. These files
+> are intact — just use the direct download links below (which bypass
+> GitHub's preview), or right-click the file name in the file list above
+> and choose **"Save link as..."** (or **"Download linked file"**):
+>
+> - [Paper S2 — direct download (≈ 34 MB)](https://github.com/450um1G/2ndCirc/raw/main/450um1G_2ndCirc_PaperS2.pdf)
+> - [Pre-split final manuscript — direct download (≈ 29 MB)](https://github.com/450um1G/2ndCirc/raw/main/450um1G_v20260414_finalbeforesplit.pdf)
+> - [1st-Circulation original — direct download (≈ 50 MB)](https://github.com/450um1G/2ndCirc/raw/main/450um1G_v2026Jan21_1stCirc.pdf)
+>
+> Paper T and Paper S1 are small enough that GitHub's preview works directly.
 >
 > 💡 **Tip for the comment-response table**: The link above opens a rendered
 > view via GitHub Pages. If instead you click the `.html` file directly from
